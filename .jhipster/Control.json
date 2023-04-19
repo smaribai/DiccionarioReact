@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419101951",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "control",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Control",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
