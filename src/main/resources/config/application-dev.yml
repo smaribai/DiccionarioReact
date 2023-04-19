@@ -49,8 +49,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/DiccionarioReact
-    username: DiccionarioReact
-    password:
+    username: postgres
+    password: pocDiccionario
     hikari:
       poolName: Hikari
       auto-commit: false
