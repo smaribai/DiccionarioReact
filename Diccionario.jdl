@@ -12,15 +12,16 @@ entity Producto {
   descripcion String  
 }
 
-/*entity ProductoControles {
+entity ProductoControles {
   descripcion String  
-}*/
+}
 
-relationship ManyToMany {
-  Producto{idControl} to Control{codigoArancelario}  
+relationship OneToOne {
+  ProductoControles{codigoArancelario} to Producto
+  ProductoControles{idControl} to Control  
 }
 // Set pagination options
-paginate Producto with infinite-scroll
+paginate Producto,ProductoControles with infinite-scroll
 paginate Control with pagination
 // Use Data Transfer Objects (DTO)
 dto * with mapstruct
