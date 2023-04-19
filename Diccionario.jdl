@@ -1,6 +1,6 @@
 entity Control {
   //@Id idControl String
-  idControl String
+  //idControl String
   nombre String
   descripcion String
   //search nombre, descripcion
@@ -18,7 +18,7 @@ entity ProductoControles {
 
 relationship OneToOne {
   ProductoControles{codigoArancelario} to Producto
-  ProductoControles{idControl} to Control  
+  ProductoControles{idControl} to Control 
 }
 // Set pagination options
 paginate Producto,ProductoControles with infinite-scroll
