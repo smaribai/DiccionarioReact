@@ -51,6 +51,9 @@ public class CacheConfiguration {
             createCache(cm, com.santi.dicccionario.domain.User.class.getName());
             createCache(cm, com.santi.dicccionario.domain.Authority.class.getName());
             createCache(cm, com.santi.dicccionario.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.santi.dicccionario.domain.Control.class.getName());
+            createCache(cm, com.santi.dicccionario.domain.Producto.class.getName());
+            createCache(cm, com.santi.dicccionario.domain.ProductoControles.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
