@@ -1,0 +1,30 @@
+entity Control {
+  //@Id idControl String
+  idControl String
+  nombre String
+  descripcion String
+  //search nombre, descripcion
+
+}
+entity Producto {
+  //@Id codigoArancelario String
+  codigoArancelario String
+  descripcion String  
+}
+
+/*entity ProductoControles {
+  descripcion String  
+}*/
+
+relationship ManyToMany {
+  Producto{idControl} to Control{codigoArancelario}  
+}
+// Set pagination options
+paginate Producto with infinite-scroll
+paginate Control with pagination
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+// angularSuffix * with mySuffix
