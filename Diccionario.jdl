@@ -1,3 +1,56 @@
+
+entity Pais {
+	@Id codigoPais String required maxlength(2)
+    nombrePais String required maxlength(100)
+}
+
+entity Divisa {
+	@Id codigoDivisa String required maxlength(3)
+    nombreDivisa String required maxlength(100)
+}
+
+entity Idioma {
+  @Id codigo String required maxlength(2)
+  nombre String required maxlength(100)
+}
+
+entity TipoCliente {
+  @Id codigo String required maxlength(3) 
+  nombre String required maxlength(100)
+}
+
+entity Cliente {
+  @Id idCliente String required maxlength(20)
+  nombre String required maxlength(70)
+  descripcion String maxlength(200)
+  direccion String maxlength(200)  
+}
+
+entity Envio {
+    cliente String
+    remitente String
+    destinatario String
+    proveedor String
+    refRemitente String
+    refDestinatario String
+    codigoArancelarioOrigen String
+    descripcion String
+    importe Double
+    provinciaDestino String
+    uds Integer
+    peso Double
+}
+
+relationship OneToOne {
+  Envio{paisOrigen} to Pais
+  Envio{paisDestino} to Pais  
+  Envio{divisa} to Divisa
+  Envio{idioma} to Idioma  
+  Envio{refCliente} to Cliente
+  Cliente{tipoCliente} to TipoCliente
+  Cliente{pais} to Pais
+}
+
 entity Control {
   //@Id idControl String
   //idControl String
@@ -21,8 +74,8 @@ relationship OneToOne {
   ProductoControles{idControl} to Control 
 }
 // Set pagination options
-paginate Producto,ProductoControles with infinite-scroll
-paginate Control with pagination
+paginate Producto,ProductoControles, Envio with infinite-scroll
+paginate Control, Pais, Divisa, Idioma, Cliente, TipoCliente  with pagination
 // Use Data Transfer Objects (DTO)
 dto * with mapstruct
 // Set service options to all except few
