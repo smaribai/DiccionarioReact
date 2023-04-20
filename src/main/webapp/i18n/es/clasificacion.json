@@ -1,0 +1,40 @@
+{
+  "diccionarioReactApp": {
+    "clasificacion": {
+      "home": {
+        "title": "Envios",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Envio",
+        "createOrEditLabel": "Crear o editar Envio",
+        "notFound": "Ningún Envios encontrado"
+      },
+      "created": "Un nuevo Envio ha sido creado con el identificador {{ param }}",
+      "updated": "Un Envio ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Envio ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Envio {{ id }}?"
+      },
+      "detail": {
+        "title": "Envio"
+      },
+      "id": "ID",
+      "cliente": "Cliente",
+      "remitente": "Remitente",
+      "destinatario": "Destinatario",
+      "proveedor": "Proveedor",
+      "refRemitente": "Ref Remitente",
+      "refDestinatario": "Ref Destinatario",
+      "codigoArancelarioOrigen": "Codigo Arancelario Origen",
+      "descripcion": "Descripcion",
+      "importe": "Importe",
+      "provinciaDestino": "Provincia Destino",
+      "uds": "Uds",
+      "peso": "Peso",
+      "paisOrigen": "Pais Origen",
+      "paisDestino": "Pais Destino",
+      "divisa": "Divisa",
+      "idioma": "Idioma",
+      "refCliente": "Ref Cliente"
+    }
+  }
+}

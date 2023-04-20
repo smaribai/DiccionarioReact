@@ -18,8 +18,16 @@
     <include file="config/liquibase/changelog/20230419101951_added_entity_Control.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20230419101952_added_entity_Producto.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20230419101953_added_entity_ProductoControles.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084615_added_entity_Pais.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084616_added_entity_Divisa.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084617_added_entity_Idioma.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084618_added_entity_TipoCliente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084619_added_entity_Cliente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084620_added_entity_Envio.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20230419101953_added_entity_constraints_ProductoControles.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084619_added_entity_constraints_Cliente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230420084620_added_entity_constraints_Envio.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

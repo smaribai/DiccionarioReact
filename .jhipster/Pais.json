@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20230420084615",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "pais",
+  "fields": [
+    {
+      "fieldName": "codigoPais",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "2",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "nombrePais",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Pais",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

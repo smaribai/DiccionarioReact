@@ -1,0 +1,100 @@
+{
+  "applications": "*",
+  "changelogDate": "20230420084620",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "envio",
+  "fields": [
+    {
+      "fieldName": "cliente",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remitente",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "destinatario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "proveedor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "refRemitente",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "refDestinatario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codigoArancelarioOrigen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "importe",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "provinciaDestino",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "uds",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "peso",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Envio",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "pais",
+      "otherEntityRelationshipName": "envio",
+      "ownerSide": true,
+      "relationshipName": "paisOrigen",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "pais",
+      "otherEntityRelationshipName": "envio",
+      "ownerSide": true,
+      "relationshipName": "paisDestino",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "divisa",
+      "otherEntityRelationshipName": "envio",
+      "ownerSide": true,
+      "relationshipName": "divisa",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "idioma",
+      "otherEntityRelationshipName": "envio",
+      "ownerSide": true,
+      "relationshipName": "idioma",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "envio",
+      "ownerSide": true,
+      "relationshipName": "refCliente",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

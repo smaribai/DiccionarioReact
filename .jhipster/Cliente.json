@@ -1,0 +1,58 @@
+{
+  "applications": "*",
+  "changelogDate": "20230420084619",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "cliente",
+  "fields": [
+    {
+      "fieldName": "idCliente",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "70"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "direccion",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cliente",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "tipoCliente",
+      "otherEntityRelationshipName": "cliente",
+      "ownerSide": true,
+      "relationshipName": "tipoCliente",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "pais",
+      "otherEntityRelationshipName": "cliente",
+      "ownerSide": true,
+      "relationshipName": "pais",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

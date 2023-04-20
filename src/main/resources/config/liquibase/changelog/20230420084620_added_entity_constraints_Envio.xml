@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Envio.
+    -->
+    <changeSet id="20230420084620-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="pais_origen_codigo_pais"
+                                 baseTableName="envio"
+                                 constraintName="fk_envio__pais_origen_id"
+                                 referencedColumnNames="codigo_pais"
+                                 referencedTableName="pais"/>
+
+        <addForeignKeyConstraint baseColumnNames="pais_destino_codigo_pais"
+                                 baseTableName="envio"
+                                 constraintName="fk_envio__pais_destino_id"
+                                 referencedColumnNames="codigo_pais"
+                                 referencedTableName="pais"/>
+
+        <addForeignKeyConstraint baseColumnNames="divisa_codigo_divisa"
+                                 baseTableName="envio"
+                                 constraintName="fk_envio__divisa_id"
+                                 referencedColumnNames="codigo_divisa"
+                                 referencedTableName="divisa"/>
+
+        <addForeignKeyConstraint baseColumnNames="idioma_codigo"
+                                 baseTableName="envio"
+                                 constraintName="fk_envio__idioma_id"
+                                 referencedColumnNames="codigo"
+                                 referencedTableName="idioma"/>
+
+        <addForeignKeyConstraint baseColumnNames="ref_cliente_id_cliente"
+                                 baseTableName="envio"
+                                 constraintName="fk_envio__ref_cliente_id"
+                                 referencedColumnNames="id_cliente"
+                                 referencedTableName="cliente"/>
+    </changeSet>
+</databaseChangeLog>

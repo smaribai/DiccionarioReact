@@ -10,6 +10,12 @@
         "control": "Control",
         "producto": "Producto",
         "productoControles": "Producto Controles",
+        "pais": "Pais",
+        "divisa": "Divisa",
+        "idioma": "Idioma",
+        "tipoCliente": "Tipo Cliente",
+        "cliente": "Cliente",
+        "envio": "Envio",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
